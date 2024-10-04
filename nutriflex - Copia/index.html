@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App dieta flexivel</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <nav id="navbar" class="navbar navbar-expand-lg shadow-sm position-fixed z-3 container-fluid bg-white">
+      <div class="container-fluid">
+        <img src="./src/assets/img/logo.png" alt=""  height="40px" width="100px">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse px-4" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#inicio"
+                >INICIO</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#depoimentos">DEPOIMENTOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#download">DOWNLOAD</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!--PRIMEIRA SESSAO-->
+    <section
+      class="inicio containerH container-fluid position-relative d-flex flex-column align-items-center justify-content-center flex-row-md"
+      id="inicio"
+    >
+    <!--<h1 class="text-center mt-lg-5 pt-5 position-absolute top-0 text-primary">NOME DO APP</h1>-->
+    <img src="./src/assets/img/desenho-de-colagem-de-pessoas (1).png" alt="" style="height: 150px;" class="d-none d-md-block">
+    
+      <div class="d-flex flex-column  flex-md-row justify-content-center col-md-8">
+        <div class="container d-flex flex-column col-xl-5 m-lg-0 align-content-md-center text-center text-md-start">
+          <h2 class="text-h2 text-primary">O melhor aplicativo de todos.</h2>
+          <p class="">
+            Você está cansado de dietas restritivas que não se encaixam na sua rotina e fazem você abrir mão dos alimentos que ama? Conheça nosso aplicativo de dieta flexível, 
+            a solução perfeita para quem busca uma alimentação equilibrada, saudável e sem sacrifícios extremos.
+          </p>
+          <button class="btn btn-primary shadow-sm py-lg-3 w-100 d-none d-lg-block " id="btn-show-details">
+           <span class="fs-4 fw-bolder">Maiores informações</span> 
+          </button>
+        </div>
+        <img
+          class="containerImg shadow rounded-3 show position-relative d-none d-sm-block mx-sm-auto mx-md-0
+          "
+          src="./src/assets/img/imagemsesssion1.jpg"
+          alt=""
+        />
+        <img
+        class="w-75 shadow rounded-3 show position-relative d-sm-none d-block mx-auto
+        "
+        src="./src/assets/img/imagemsesssion1.jpg"
+        alt=""
+      />
+      </div>
+
+
+      <!--SECTION SHOW-->
+      <section
+        class="d-none position-absolute m-5 col-xl-9 col-sm-12 border rounded-3 border-light p-5 shadow-lg bg-opacity-75 divShow "
+        id="div-show"
+      >
+      <div>
+       <button class="btn btn-close position-absolute top-0 p-3 "> </button>
+      </div>
+
+       <div class="d-flex flex-column  justify-content-between">
+
+       
+
+      <!-- COMEÇO DIV BENEFICIOS-->
+      <div  class="d-flex flex-lg-row flex-column gap-2 ">
+
+       <div class="divTamanho w-75  border rounded-1 border-black d-flex p-3 justify-content-between flex-column shadow-lg zoom">
+        <h3  class="text-center text-decoration-underline text-success">Educação Nutricional</h3>
+        <img
+        class="containerImg shadow-lg rounded-3 mx-auto rounded-circle d-lg-block d-none"        src="./src/assets/img/desenho de um nutricionista ensinando o paciente a calcular sua dieta.png"
+        alt=""
+      />  
+      <p class="overflow-scroll"> Além de ajudar na perda de peso ou ganho de massa muscular, um aplicativo de d
+        ieta flexível educa sobre os macronutrientes e a importância de uma alimentação balanceada. Ele ince
+        ntiva escolhas alimentares saudáveis e promove uma relação positiva com a comida, evitando a monotonia de dietas restritivas
+        </p>
+       </div>
+
+       <div class="divTamanho w-75  border rounded-1 border-black d-flex p-3 justify-content-between flex-column shadow-lg zoom ">
+        <h3 class="text-center text-decoration-underline text-success">Facilidade de Acompanhamento</h3>
+        <img
+        class="containerImg shadow-lg rounded-3 mx-auto rounded-circle"        src="./src/assets/img/Facilidade de Acompanhamento_ Com um aplicativo de dieta flexível, você pode facilmente rastrear seu....png"
+        alt=""
+      />
+      <p class="overflow-scroll">Com um aplicativo de dieta flexível, você pode facilmente 
+        rastrear seu consumo diário de alimentos. Ele oferece ferramentas para registrar suas refeições
+        , monitorar seu progresso e ajustar seu plano conforme necessário. Isso torna mais fácil manter-
+        se no caminho certo e alcançar seus objetivos de saúde e fitness</p>
+     
+        
+        </div>
+
+
+        <div class="divTamanho w-75  border rounded-1 border-black d-flex p-3 justify-content-between flex-column shadow-lg zoom" >
+          <h3 class="text-center text-decoration-underline text-success">Personalização e Flexibilidade</h3>
+          <img
+          class="containerImg shadow-lg rounded-3 mx-auto rounded-circle"
+          src="./src/assets/img/estilo de desenho de um braço musculoso e em volta dele uma fita metrica sem os numeros medindo ele,....png"
+          alt=""
+        />  
+
+        <p class="overflow-scroll">Um aplicativo de dieta flexível permite que você personaliz
+            e seu plano alimentar de acordo com suas necessidades e preferências individuais. Ele calcula a 
+            quantidade ideal de calorias e macronutrientes que você precisa, ajudando a manter uma alimentação
+             equilibrada sem abrir mão dos alimentos que você gosta</p> 
+        </div>
+        
+       </div>
+        
+      </div>
+      <!-- FIM DIV BENEFICIOS-->
+
+      </section>
+        <!--FIM SECTION SHOW-->
+
+        
+      
+     
+    </section>
+<!--PRIMEIRA SESSAO-->
+
+
+<!--SECTION SHOW APLICATIVO MOVEL-->
+<section
+class="d-md-none d-flex"
+id="section-Phone"
+>
+<div class="d-flex flex-row  justify-content-between">
+
+
+
+<!-- COMEÇO DIV BENEFICIOS-->
+<div  class="d-flex flex-column gap-4 my-4">
+
+<div class="divTamanho w-100  border rounded-1 border-black d-flex px-2 justify-content-between flex-column shadow-lg zoom">
+<h3  class="text-center text-decoration-underline text-success">Educação Nutricional</h3>
+<img
+class="w-50 shadow-lg rounded-3 mx-auto rounded-circle"        src="./src/assets/img/desenho de um nutricionista ensinando o paciente a calcular sua dieta.png"
+alt=""
+/>  
+<p class="overflow-scroll"> Além de ajudar na perda de peso ou ganho de massa muscular, um aplicativo de d
+ieta flexível educa sobre os macronutrientes e a importância de uma alimentação balanceada. Ele ince
+ntiva escolhas alimentares saudáveis e promove uma relação positiva com a comida, evitando a monotonia de dietas restritivas
+</p>
+</div>
+
+<div class="divTamanho w-100  border rounded-1 border-black d-flex px-2 justify-content-between flex-column shadow-lg zoom ">
+<h3 class="text-center text-decoration-underline text-success">Facilidade de Acompanhamento</h3>
+<img
+class="w-50 shadow-lg rounded-3 mx-auto rounded-circle"        src="./src/assets/img/Facilidade de Acompanhamento_ Com um aplicativo de dieta flexível, você pode facilmente rastrear seu....png"
+alt=""
+/>
+<p class="">Com um aplicativo de dieta flexível, você pode facilmente 
+rastrear seu consumo diário de alimentos. Ele oferece ferramentas para registrar suas refeições
+, monitorar seu progresso e ajustar seu plano conforme necessário. Isso torna mais fácil manter-
+se no caminho certo e alcançar seus objetivos de saúde e fitness</p>
+
+
+</div>
+
+
+<div class="divTamanho w-100  border rounded-1 border-black d-flex px-2 justify-content-between flex-column shadow-lg zoom" >
+  <h3 class="text-center text-decoration-underline text-success">Personalização e Flexibilidade</h3>
+  <img
+  class="w-50 shadow-lg rounded-3 mx-auto rounded-circle"
+  src="./src/assets/img/estilo de desenho de um braço musculoso e em volta dele uma fita metrica sem os numeros medindo ele,....png"
+  alt=""
+/>  
+
+<p class="overflow-scroll">Um aplicativo de dieta flexível permite que você personaliz
+    e seu plano alimentar de acordo com suas necessidades e preferências individuais. Ele calcula a 
+    quantidade ideal de calorias e macronutrientes que você precisa, ajudando a manter uma alimentação
+     equilibrada sem abrir mão dos alimentos que você gosta</p> 
+</div>
+
+</div>
+
+</div>
+<!-- FIM DIV BENEFICIOS-->
+
+</section>
+<!--FIM SECTION SHOW APLICATIVO MOVEL-->
+
+<!--SEGUNDA SESSAO-->
+    <section
+      class="vantagens containerH bg-white justify-content-center align-items-center d-flex "
+      id="depoimentos"
+    >
+   <div class="h-75 container-carousel justify-content-center align-items-center d-none flex-column gap-5 col-xl-8 col-md-10 col-sm-12 col-12 " id="showCarousel"> 
+    <h2 class="show text-h2 text-primary text-center">Depoimentos Inspiradores.</h2>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide carousel-dark d-flex h-75 col-xl-8 col-lg-9 col-md-10 col-sm-12 bg-gradient rounded-2 shadow-lg position-relative show" data-bs-ride="carousel">
+  <div class="carousel-inner">
+
+<!-- ITEM CAROUSEL 1 -->
+<div class="carousel-item active">
+      
+  <div class="d-flex gap-md-5 p-1 p-md-5 flex-column-reverse flex-md-row  justify-content-center align-items-center"> 
+    <img src="./src/assets/img/todos.png" class="d-block w-50 rounded-2 shadow-lg" alt="...">
+  <div>
+    
+    <p>O aplicativo de dieta flexível tem transformado vidas, e isso é evidente nos depoimentos de quatro usuários satisfeitos. Cada um deles encontrou no app uma ferramenta essencial para alcançar seus objetivos de saúde e bem-estar, e agora compartilham suas experiências positivas.</p>
+  </div>
+
+</div>
+
+</div>
+<!-- FIM ITEM CAROUSEL 1 -->
+   
+<!-- ITEM CAROUSEL 2 -->
+<div class="carousel-item ">
+      
+  <div class="d-flex gap-md-5 p-1 p-md-5 flex-column-reverse flex-md-row  justify-content-center align-items-center"> 
+    <img src="./src/assets/img/Untitled image.jpeg" class="d-block w-50 rounded-2 shadow-lg" alt="...">
+  <div>
+    
+    <p>“Desde que comecei a usar o aplicativo de dieta flexível, minha relação com a comida mudou completamente. Agora, posso desfrutar dos meus alimentos favoritos sem culpa, enquanto ainda alcanço meus objetivos de saúde. A flexibilidade que o app oferece é incrível!”</p>
+  </div>
+
+</div>
+
+</div>
+<!-- FIM ITEM CAROUSEL 2 -->
+
+<!-- ITEM CAROUSEL 3 -->
+    <div class="carousel-item ">
+      
+      <div class="d-flex gap-md-5 p-1 p-md-5 flex-column-reverse flex-md-row  justify-content-center align-items-center">         <img src="./src/assets/img/pessoa2.png" class="d-block w-50 rounded-2 shadow-lg" alt="...">
+      <div>
+        
+        <p>"O aplicativo de dieta flexível me ajudou a entender melhor os macronutrientes e como eles afetam meu corpo. Com ele, consegui perder peso de forma saudável e sustentável, sem precisar abrir mão dos alimentos que amo. Recomendo a todos!”</p>
+      </div>
+
+    </div>
+
+    </div>
+  <!-- FIM ITEM CAROUSEL 3 -->
+
+  <!-- ITEM CAROUSEL 4 -->
+  <div class="carousel-item ">
+      
+    <div class="d-flex gap-md-5 p-1 p-md-5 flex-column-reverse flex-md-row  justify-content-center align-items-center">       <img src="./src/assets/img/pessoa3.png" class="d-block w-50 rounded-2 shadow-lg" alt="...">
+    <div>
+     
+      <p> “Sempre tive dificuldade em seguir dietas restritivas, mas com o aplicativo de dieta flexível, encontrei um equilíbrio perfeito. Posso ajustar minhas refeições de acordo com minha rotina e ainda assim ver resultados incríveis. É um verdadeiro divisor de águas!”</p>
+    </div>
+
+  </div>
+
+  </div>
+<!-- FIM ITEM CAROUSEL 4 -->
+
+<!-- ITEM CAROUSEL 5 -->
+<div class="carousel-item ">
+      
+  <div class="d-flex gap-md-5 p-1 p-md-5 flex-column-reverse flex-md-row  justify-content-center align-items-center">    <img src="./src/assets/img/pessoa4.png" class="d-block w-50 rounded-2 shadow-lg" alt="...">
+  <div>
+    
+    <p>“O aplicativo de dieta flexível é uma ferramenta fantástica para quem busca uma alimentação equilibrada sem restrições severas. Ele me permitiu experimentar novos alimentos e receitas, tornando minha jornada de emagrecimento muito mais agradável e eficaz.”</p>
+  </div>
+
+</div>
+
+</div>
+<!-- FIM ITEM CAROUSEL 5 -->
+  <button class="carousel-control-prev text-secondary" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-theme="dark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden ">Next</span>
+  </button>
+
+</div>
+
+   </div>
+
+  </section>
+<!--SEGUNDA SESSAO-->
+
+<!--TERCEIRA SESSAO-->
+    <section class="download containerH container-fluid position-relative d-flex flex-column align-items-center justify-content-center flex-row-md" id="download">
+
+      
+
+      <div class="d-flex flex-column flex-md-row justify-content-center col-md-12 col-lg-8">
+
+      <div class="d-none flex-column justify-content-evenly align-content-md-center show container d-flex col-xl-5 m-lg-0 text-center text-md-start" id="container-text-download"> 
+       
+        <h2 class="text-h2 text-primary">Aplicativo já está disponível nas plataformas:</h2>
+        <p>Faça o download do nosso aplicativo e aproveite agora mesmo o melhor aplicativo de dieta flexivel.</p>
+
+
+      <div class="icons-download d-none rounded-5 shadow-lg bg-white d-lg-flex zoom p-xl-2 px-2 w-75 my-1 mx-md-auto"> <h5 class="text-black mx-auto"><a class="text-decoration-none text-black mx-auto text-wrap w-75" href="https://www.apple.com/br/app-store/">Download disponivel na <span class="fw-bolder text-white bg-black px-2 rounded-5">AppStore</span></h5></a> <img  src="./src/assets/img/icons8-ios-50.png" alt="" width="40" height="50"></div>
+      <div class="icons-download d-none rounded-5 shadow-lg bg-white d-lg-flex zoom p-xl-2 px-2 w-75 my-1 mx-md-auto"><h5 class="text-black mx-auto"><a class="text-decoration-none text-black mx-auto text-wrap w-75" href="https://play.google.com/store/apps?hl=pt_BR&pli=1"> Download disponivel na <span class="fw-bolder text-white bg-black px-2 rounded-5">PlayStore</span></h5></a> <img  src="./src/assets/img/icons8-android-os-50.png" alt="" width="40" height="50"></div>
+     
+      <div class="d-flex justify-content-between mx-auto px-5 w-100 mb-sm-4">
+      <div class="icons-download d-flex rounded-4 shadow-lg bg-white d-lg-none zoom w-25 h-100 my-1 mx-5"> <a class="text-decoration-none text-black mx-auto text-wrap " href="https://www.apple.com/br/app-store/"><img src="./src/assets/img/icons8-ios-50.png" alt=""></a> </div>
+      <div class="icons-download d-flex rounded-4 shadow-lg bg-white d-lg-none zoom w-25 h-100 my-1 mx-5"><a class="text-decoration-none text-black mx-auto text-wrap " href="https://play.google.com/store/apps?hl=pt_BR&pli=1">  <img  src="./src/assets/img/icons8-android-os-50.png" alt=""></div> </a>
+    </div>
+
+    </div>
+
+      <div  class="containerImg shadow rounded-3 show position-relative d-none mx-sm-auto mx-md-0 mt-md-5 col-lg-5 col-md-6
+      " id="container-Img">
+        <img src="./src/assets/img/Facilidade de Acompanhamento_ Com um aplicativo de dieta flexível, você pode facilmente rastrear seu....png" alt="" class="h-100 w-100 rounded-2 shadow-lg show">
+      </div>
+      <div  class="rounded-3 show position-relative d-sm-none d-flex mx-auto mt-4 w-75
+      " id="container-Img">
+        <img src="./src/assets/img/Facilidade de Acompanhamento_ Com um aplicativo de dieta flexível, você pode facilmente rastrear seu....png" alt="" class="h-100 w-100 rounded-2 shadow-lg show">
+      </div>
+
+    </div>
+    <button class="btn-primary" id="btnTestar">TESTAR A VERSÃO ONLINE</button>
+
+
+
+    </section>
+<!--FIM TERCEIRA SESSAO-->
+
+<!--SESSAO MACRO--> 
+<section id="sectionMacros" class="position-fixed container-alimentos d-none justify-content-center flex-column align-items-center z-2 bg-white shadow-lg">
+
+  <button class="btn-close position-absolute btn-lg" id="btnClose" ></button>
+  
+  <h2 class="w-50 fw-bold text-center">NUTRIFLEX LOGO</h2>
+
+  <!--DIV CENTRAL BTNS E INFOS-->
+  <div class="w-75 h-75 d-flex flex-row"> 
+
+  <!--ESTILIZAÇÃO BTN-->
+  <div class="d-flex flex-column border gap-3">
+    <button id="btnPlus" class="border-0 btn"><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/plus-math.png" alt="plus-math"/></button> 
+  
+    <button id="btnGrafico" class="border-0 btn"><img id="imgGrafico" class="rounded-circle" src="./src/assets/img/grafico.jpg" alt=""></button>
+  
+    <button id="listaAlimentos" class="btn border-0"><img id="imgListaAlimentos" class="rounded-circle" src="./src/assets/img/lista.jpg" alt=""></button>
+
+    <button id="btnMetas" class="btn border-0"><img id="imgListaAlimentos" class="rounded-circle" src="./src/assets/img/target_9461109.png" alt=""></button>
+
+  </div>
+  <!--FIM ESTILIZAÇÃO BTN-->
+
+<!--DIV CENTRAL INFOS-->
+  <div class="h-100 w-75 d-flex flex-column position-relative">
+
+    <div  id="showAnimation" class="h-100 w-100 z-3 position-absolute my-auto d-none justify-content-center align-items-center"> 
+      <p id="animation" >NUTRIFLEX</p>
+    </div>
+
+    <!--DIV METAS DEFINIDAS NO TOPO-->
+    <div id="showMetasDefinidas" class="d-flex flex-column">
+      <h4>META DO DIA</h4>
+      <div class="d-flex flex-row gap-2">
+      <p>PROTEINAS: <span id="showProteinas"> 0</span> G </p>
+      <p>CARBOIDRATOS: <span  id="showCarboidratos"> 0</span> G</p>
+      <p>GORDURAS: <span  id="showGorduras"> 0</span> G</p>
+      <p>KCAL TOTAL: <span id="showKcalTotal"> 0</span></p>
+    </div>
+    </div>
+<!--FIM DIV METAS DEFINIDAS NO TOPO-->
+
+   <!--DIV METAS ATINGIDAS NO TOPO-->
+   <div id="showMetasAtingidas" class="d-flex flex-column">
+    <h4>META DO DIA ATINGIDA</h4>
+    <div class="d-flex flex-row gap-2">
+    <p>PROTEINAS: <span id="showProteinasAtg"> 0</span> G </p>
+    <p>CARBOIDRATOS: <span  id="showCarboidratosAtg"> 0</span> G</p>
+    <p>GORDURAS: <span  id="showGordurasAtg"> 0</span> G</p>
+    <p>KCAL TOTAL: <span id="showKcalTotalAtg"> 0</span></p>
+  </div>
+  </div>
+<!--FIM DIV METAS ATINGIDAS NO TOPO-->
+
+
+    <!--DIV METAS-->
+    <div id="inputMetas" class="position-absolute d-none h-100 w-100 border-black bg-white z-2 justify-content-center flex-column align-items-center">
+      <button class="btn-close position-absolute btn-lg" id="btnCloseMetas" ></button>
+      <div id="btnKcalMacros" >
+      <button class="btn" id="btnKcal" onclick="showMetaKcal()">Definir meta pela calorias</button>
+      <button class="btn" id="btnMacros" onclick="showMetaMacro()">Definir meta pelos macros</button>
+    </div>
+    <div>
+      <form id="meta-kcal-form" class="d-none">
+        <div class="mb-3">
+            <label for="metaKcal" class="form-label">Meta de Calorias (kcal)</label>
+            <input type="number" class="form-control" id="metaKcal" name="metaKcal" placeholder="Digite a meta de kcal" required>
+        </div>
+        <button type="submit" class="btn btn-primary" id="btnMetaKcal" >Salvar Meta</button>
+    </form>
+    <p id="metaCarboidrato"></p>
+    <p id="metaProteina"></p>
+    <p id="metaGordura"></p>
+  </div>
+
+  <div id="containerMacrosMeta" class="d-none flex-column ">
+<form id="formMacros" class="d-flex justify-content-between flex-column">
+  <label for="metaProteina">Meta de Proteinas</label>
+  <input type="number" name="metaProteina" id="metaMacroProteina" placeholder="Digite a meta de proteina em gramas">
+  <label for="metaCarboidrato">Meta de Carboidratos</label>
+  <input type="number" name="metaCarboidrato" id="metaMacroCarboidrato" placeholder="Digite a meta de Carboidratos em gramas">
+  <label for="metaGordura">Meta de Gorduras</label>
+  <input type="number" name="metaGordura" id="metaMacroGordura" placeholder="Digite a meta de Gorduras em gramas" >
+
+</form>
+<p id="resultadoCarboidrato"></p>
+<p id="resultadoProteina" ></p>
+<p id="resultadoGordura"></p>
+<h4 id="resultadoKcal"></h4>
+<button type="submit" class="btn btn-primary" id="btnMetaKcalMacros" >Salvar Meta</button>
+  </div>
+
+    </div>
+    <!--FIM DIV METAS-->
+
+    <!--INPUT PESQUISA ALIMENTO-->
+    <div id="inputAlimento" class="position-absolute d-none h-100 w-100 border-black bg-white z-2 justify-content-center flex-column align-items-center">
+      <button class="btn-close position-absolute btn-lg" id="btnCloseForm" ></button>
+
+        <!--FORM PESQUISA ALIMENTO-->
+      <form action="" class="mt-4" id="formAlimento">
+        <label for="inputFood">ALIMENTO:</label> <input type="text" id="inputFood" class="input-border">
+      <button id="btn-input">Enviar</button>  
+    </form>
+    <!--FIM FORM PESQUISA ALIMENTO-->
+
+    <!--FORM QUANTIDADE DO ALIMENTO-->
+    <div id="formQtd" class="h-auto w-75 d-flex rounded-2 m-4 mx-4 p-4 text-dark-emphasis fw-bolder shadow-lg d-flex justify-content-center flex-column align-items-center text-start">
+      
+      <form class="text-center d-flex flex-column p-2">
+        <label for="inputQtd">QUANTIDADE EM GRAMAS</label>
+          <input type="number" id="inputQtd" value="100" class="h-50 w-50 my-auto mx-auto input-border">
+      
+          <label for="refeicao">Selecione qual refeição você está fazendo:</label>
+          <select id="refeicao" name="refeicao" class="h-50 w-50 my-auto mx-auto input-border">
+            <option value="cafe-da-manha">Café da Manhã</option>
+            <option value="almoco">Almoço</option>
+            <option value="janta">Janta</option>
+            <option value="lanche">Lanche</option>
+          </select>
+         
+        </form>
+      </form>
+      <p id="foodNome">BANANA</p>
+    <p id="foodCaloria">KCAL 130.0</p>
+    <p id="foodProteina">PROTEINA 25.5</p>
+    <p id="foodGordura">GORDURA 6.0</p>
+    <p id="foodCarboidrato">CARBOIDRATO 2.0</p>
+  
+    <div>
+    <button id="btn-enviar">ENVIAR</button>
+    <button id="btn-cancelar">CANCELAR</button>
+  </div>
+  </div>
+  <!--FIM FORM QUANTIDADE DO ALIMENTO-->
+
+  </div>
+  <!--FIM INPUT PESQUISA ALIMENTO-->
+  
+  <!--LISTAS DE ALIMENTOS CONSUMIDOS-->
+  <div id="container-listas" class="d-none">
+    <div id="container-cafe" class="d-flex container-fluid justify-content-between my-2 text-start flex-column w-100 border border-primary rounded-1 py-1 ">
+       <div class="w-100 d-flex justify-content-between align-content-center">
+        <h3 class="d-inline text-center ">Café da Manhã</h3>
+        <div class="d-flex flex-row justify-content-end gap-5 align-content-center">
+        <p class="fw-bold text-center align-items-center">KCAL: <span id="kcal-cafe">0</span></p>
+         <button onclick="displayRef(this)" value="alimentos-cafe" id="btn-show-cafe">Show</button>
+         </div>
+        </div>
+    <ul id="alimentos-cafe" class="d-none h-25 w-100 "></ul>
+  </div>
+  
+    <div id="container-almoco" class=" d-flex container-fluid justify-content-between  my-2 text-start flex-column w-100 border border-primary rounded-1 py-1">
+       <div class="w-100 d-flex justify-content-between align-items-center">
+        <h3 class="d-inline">Almoço</h3>
+        <div class="d-flex flex-row justify-content-end gap-5 align-items-center">
+        <p class="fw-bold fs-4">KCAL: <span id="kcal-almoco">0</span></p>
+         <button onclick="displayRef(this)" value="alimentos-almoco" id="btn-show-almoco" >Show</button>
+        </div>
+        </div>
+    <ul id="alimentos-almoco" class="d-none h-25 w-100 "></ul>
+  </div>  
+  
+    <div id="container-janta" class=" d-flex container-fluid justify-content-between my-2 text-start flex-column w-100 border border-primary rounded-1 py-1">
+       <div class="w-100 d-flex justify-content-between">
+        <h3 class="d-inline">Janta</h3>
+        <div class="d-flex flex-row justify-content-end gap-5">
+        <p class="fw-bold fs-4">KCAL: <span id="kcal-janta">0</span></p>
+         <button onclick="displayRef(this)" value="alimentos-janta" id="btn-show-janta">Show</button>
+        </div>
+        </div>
+    <ul id="alimentos-janta" class="d-none h-25 w-100 "></ul>
+  </div>
+  
+    <div id="container-lanche" class=" d-flex container-fluid justify-content-between my-2 text-start flex-column w-100 border border-primary rounded-1 py-1">
+       <div class="w-100 d-flex justify-content-between">
+        <h3 class="d-inline">Lanche</h3>
+        <div class="d-flex flex-row justify-content-end gap-5">
+        <p class="fw-bold fs-4">KCAL: <span id="kcal-lanche">0</span></p>
+         <button class="a" id="btn-show-lanche" onclick="displayRef(this)" value="alimentos-lanche">Show</button>
+        </div>
+        </div>
+    <ul id="alimentos-lanche" class="d-none h-25 w-100 "></ul>
+  </div>
+
+  <div id="container-alimentos-total" class=" d-flex container-fluid justify-content-between my-2 text-start flex-column w-100 border border-primary rounded-1 py-1">
+    <div class="w-100 d-flex justify-content-between">
+     <h3 class="d-inline">Alimentos TOTAL:</h3>
+     <div class="d-flex flex-row justify-content-end gap-5">
+     <p class="fw-bold fs-4">KCAL: <span id="kcal-alimentos-total">0</span></p>
+      <button class="a" id="btn-show-alimentos-total" onclick="displayRef(this)" value="showListaAlimentos">Show</button>
+     </div>
+     </div>
+     <ul id="showListaAlimentos" class="d-none h-25 w-100 "></ul>
+</div>
+
+</div>
+ <!--FIM LISTAS DE ALIMENTOS CONSUMIDOS-->
+ 
+
+<div class=" hidden" id="grafico">
+  <div class="bar" id="proteina" >40%</div>
+  <div class="bar" id="carboidrato" style="height: 20%;">30%</div>
+  <div class="bar" id="gordura" style="height: 30%;">30%</div>
+  <div class="bar" id="calorias" style="height: 100%;">100%</div>
+</div>
+
+
+
+
+<!--FIM DIV CENTRAL INFOS-->
+
+</div>
+<!--FIM DIV CENTRAL BTNS E INFOS-->
+
+ </section>
+
+ <!--FIM SESSAO MACRO-->
+
+<!--FOOTER-->
+
+    <footer class="bg-primary text-white text-center py-3">
+      <div class="container">
+          <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+          <p>Contato: <a href="mailto:contato@meusite.com" class="text-white">jansen.josecarlos@gmail.com</a></p>
+          <p>Imagem de <a class="text-white" href="https://br.freepik.com/fotos-gratis/desenho-de-colagem-de-pessoas_12976943.htm#query=pessoas%20diferentes&position=1&from_view=keyword&track=ais_hybrid&uuid=b06d9d51-34b4-4a6f-92ca-07c001d4c221">Freepik</a></p>
+
+      </div>
+  </footer>
+    <!-- FIM FOOTER-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./src/script/index.js"></script>
+    <script type="module" src="./src/script/api.js"></script>
+    <script type="module" src="./src/script/metas.js"></script>
+  </body>
+</html>

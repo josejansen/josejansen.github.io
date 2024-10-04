@@ -1,0 +1,267 @@
+* {
+  scrollbar-width: none;
+  font-family: 'Courier New', Courier, monospace;
+}
+#navbar {
+  font-size: 20px;
+  a {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+  }
+  a:hover {
+    transition: all 0.5s;
+    color: blue;
+    scale: 1.05;
+    font-weight: 800;
+  }
+}
+.text-h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+}
+.containerH {
+  height: 100vh;
+  background: rgba(230, 241, 251, 0.87);
+}
+.containerImg {
+  width: 40%;
+}
+.divShow {
+  background: rgb(253, 253, 253);
+  width: 55%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.divTamanho {
+  height: 510px;
+}
+
+.zoom {
+  transition: transform 0.4s ease-in;
+}
+.zoom:hover {
+  transform: scale(1.01);
+  background: rgb(239, 239, 239);
+}
+.icons-download {
+  height: 15%;
+  width: 275px;
+}
+.show {
+  animation: fadePositionLeft 1s ease-in-out;
+}
+.container-carousel {
+  width: 65%;
+}
+.custom-black-button {
+  background-color: black;
+  border-color: black;
+}
+#section-Phone {
+  height: auto;
+  background: rgba(230, 241, 251, 0.87);
+}
+
+.bar {
+  width: 20%;
+  background-color: #4caf50;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  transition: height 1s ease;
+}
+
+.chart-container {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 80%;
+  max-width: 600px;
+  height: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.hidden {
+  display: none;
+}
+h5 {
+  font-size: 15px;
+}
+#sectionMacros {
+  height: 85vh;
+  width: 55vw;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  animation: showMacros 0.5s linear;
+}
+.btn-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 0.5s ease-in-out;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 10px;
+  width: 75px;
+  height: 155px;
+  border-radius: 100%;
+  background-color: blue;
+  opacity: 1;
+}
+
+#animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 3.5s ease-in-out;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  background-color: blue;
+  opacity: 1;
+}
+#showAnimation {
+  animation: show 3.5s ease-out;
+}
+#formQtd {
+  animation: showForm 3.5s ease-in;
+  background: rgba(230, 241, 251, 0.87);
+}
+.btn-lg {
+  bottom: 30px;
+  right: 30px;
+  height: 30px;
+  background-color: #4caf50;
+}
+#btnClose,
+#btnCloseForm {
+  top: 20px;
+  left: 20px;
+}
+#imgGrafico,
+#imgListaAlimentos {
+  height: 50px;
+  width: 50px;
+}
+.input-border {
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 10px;
+}
+.input-border:focus {
+  border: 2px solid blue;
+  outline: none;
+  border-radius: 10px;
+
+}
+#btn-input , #btn-enviar , #btn-cancelar, #btn-show-almoco , #btn-show-janta , #btn-show-cafe , #btn-show-lanche {
+  background: rgba(230, 241, 251, 0.87);
+  color: rgba(0, 0, 0);
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+}
+@media (max-width: 600px) {
+  #inicio {
+    height: 110vh;
+  }
+}
+
+@keyframes spin {
+  0% {
+    opacity: 0;
+    border-radius: 0%;
+  }
+  50% {
+    scale: 1.5;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-radius: 100%;
+    background-color: blue;
+    opacity: 1;
+  }
+}
+@keyframes showMacros {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 0;
+    top: 100%;
+    right: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showForm {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0.75;
+    background-color: white;
+  }
+  100% {
+    background-color: white;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadePositionLeft {
+  from {
+    opacity: 0;
+    left: 100%;
+    transform: scale(1.2);
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes fadePositionTop {
+  from {
+    opacity: 0;
+    top: 100%;
+    transform: scale(1.2);
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
