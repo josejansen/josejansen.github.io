@@ -1,0 +1,41 @@
+.erro::after {
+  content: ' OBRIGATÓRIO PREENCHER TODOS OS CAMPOS!';
+  background: red;
+  color: azure;
+  width: max-content;
+}
+
+.notaRed {
+  background: red;
+  color: azure;
+  width: 100px;
+  font-weight: bold;
+}
+
+.notaYellow {
+  background: rgb(234, 255, 0);
+  color: rgb(2, 2, 2);
+  width: 100px;
+  font-weight: bold;
+}
+
+.notaGreen {
+  background: rgb(51, 255, 0);
+  color: rgb(2, 2, 2);
+  width: 100px;
+  font-weight: bold;
+}
+
+.noshow {
+  display: none;
+}
+.show {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: solid black 2px;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+
+}

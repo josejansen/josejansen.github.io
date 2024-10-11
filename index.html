@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checklist Venda</title>
+    <link rel="stylesheet" href="./src/style/style.css" />
+    <link rel="stylesheet" href="./src/style/animation.css" />
+  </head>
+  <body>
+    <section id="checkList">
+      <h2>Nota Atendimento</h2>
+
+      <!--ABORDAGEM-->
+      <div id="abordagem">
+        <div class="divTitulo">
+          <h3 id="btnShowAbordagem" class="btnH3">1 - Saudação / Abordagem</h3>
+          <h4 id="notaAbordagem" class="nota noshow"></h4>
+        </div>
+        <form action="" id="formAbordagem" class="noshow">
+          <p>Estava pronto para receber o cliente?</p>
+          <label>
+            <input type="radio" id="recepcaoSim" />
+            Sim
+          </label>
+          <label>
+            <input type="radio" id="recepcaoNao" />
+            Não
+          </label>
+          <!--DIV PARA APARECER SE FOR SIM-->
+          <div id="showDiv" class="noshow quente-fria">
+            <label>
+              <input type="radio" name="recepcaoQuente" id="recepcaoQuente" />
+              Recepção quente
+            </label>
+            <label>
+              <input type="radio" name="recepcaoFria" id="recepcaoFria" />
+              Recepção fria
+            </label>
+          </div>
+          <!--DIV PARA APARECER SE FOR SIM-->
+          <button id="btnAbordagem">Enviar</button>
+        </form>
+        <h4 id="notaAbordagem" class="nota noshow"></h4>
+      </div>
+      <!--ABORDAGEM-->
+
+      <!--QUEBRA DE GELO-->
+      <div id="quebraGelo">
+        <h3 id="btnShowQuebraGelo" class="btnH3">2- Quebra de Gelo</h3>
+        <h4 id="notaQuebraGelo" class="nota noshow"></h4>
+        <form id="formQuebraGelo" class="noshow">
+          <label for="name">
+            Perguntou o nome do cliente?
+            <input type="radio" name="name" id="nameYes" value="sim" />
+            Sim
+            <input type="radio" name="name" id="nameNo" value="nao" />
+            Não
+          </label>
+          <label for="Askname" class="noshow" id="askName"
+            >Qual o nome do cliente?
+            <input type="text" name="Askname" id="inputName" />
+          </label>
+          <label for="askCliente" class="noshow" id="askCliente">
+            Quebrou o gelo de qual forma?
+            <input
+              type="radio"
+              name="askCliente"
+              id="focoProduto"
+              value="sim"
+            />
+            Foco no produto
+            <input
+              type="radio"
+              name="askCliente"
+              id="focoCliente"
+              value="sim"
+            />
+            Foco no cliente
+            <input
+              type="radio"
+              name="askCliente"
+              id="naoConseguiu"
+              value="não"
+            />
+            Não conseguiu
+          </label>
+          <button id="btnQuebraGelo">Enviar</button>
+        </form>
+      </div>
+      <!--QUEBRA DE GELO-->
+      <div id="apresentacaoLoja">
+        <h3 id="btnApresentacaoLoja" class="btnH3">3 - Apresentação da Loja</h3>
+      </div>
+      <div id="apresentacaoProduto">
+        <h3 id="btnApresentacaoProduto" class="btnH3">
+          4 - Apresentação do Produto
+        </h3>
+      </div>
+      <div id="contornoObj">
+        <h3 id="btnContornoObj" class="btnH3">4 - Contorno de Objeção</h3>
+      </div>
+      <div id="fechamento">
+        <h3 id="btnFechamento" class="btnH3">5 - Fechamento</h3>
+      </div>
+      <div id="infoVenda">
+        <h3 id="infoName" class="btnH3">RESUMO VENDA</h3>
+        
+        <div class="noshow" id="infoUl">
+        <ul id="infoUlQuebraGelo"></ul>
+        <ul id="infoUlAbordagem"></ul>
+      </div>
+
+      </div>
+    </section>
+
+    <script type="module" src="./src/script/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 25px;
+}
+#checkList {
+  margin: auto;
+  padding: 10px;
+  min-height: 600px;
+  max-width: 600px;
+  background: #9580fc;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  gap: 50px;
+
+  .btnH3 {
+    text-align: center;
+    max-width: 500px;
+    height: 30px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .btnH3:hover {
+    transition: 500ms;
+    outline: #453c73;
+    color: aliceblue;
+  }
+}
+.divTitulo {
+  display: inline-block;
+  align-content: center;
+}
+#btnShowAbordagem {
+}
+
+.quente-fria {
+}
+.nota {
+  height: 40px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px;
+  font-size: 30px;
+}
+
+#quebraGelo {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+#formQuebraGelo {
+  height: auto;
+}
