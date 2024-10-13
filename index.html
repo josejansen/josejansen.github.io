@@ -89,14 +89,43 @@
         </form>
       </div>
       <!--QUEBRA DE GELO-->
+
+      <!--APRESENTA DA LOJA-->
       <div id="apresentacaoLoja">
-        <h3 id="btnApresentacaoLoja" class="btnH3">3 - Apresentação da Loja</h3>
-      </div>
-      <div id="apresentacaoProduto">
-        <h3 id="btnApresentacaoProduto" class="btnH3">
-          4 - Apresentação do Produto
+        <h3 id="btnShowApresentacaoLoja" class="btnH3">
+          3 - Apresentação da Loja
         </h3>
+        <form id="formApresentacaoLoja" class="noshow">
+          <label for="askApresenta" id="askApresenta" class="show"
+            >Apresentou a loja?
+            <input
+              type="radio"
+              name="askApresenta"
+              id="askApresentaSim"
+              value="Sim"
+            />Sim
+            <input
+              type="radio"
+              name="askApresenta"
+              id="askApresentaNao"
+              value="Não"
+            />Não
+          </label>
+          <label id="labelText" class="noshow">
+            Como apresentou a loja para seu cliente:
+            <textarea
+            id="inputTextArea"
+              class="inputText"
+              placeholder="Apresentei os produtos"
+              rows="4"
+              cols="40"
+            >
+            </textarea>
+          </label>
+          <button id="btnApresentacaoLoja" class="show">Enviar</button>
+        </form>
       </div>
+      <!--APRESENTA DA LOJA-->
       <div id="contornoObj">
         <h3 id="btnContornoObj" class="btnH3">4 - Contorno de Objeção</h3>
       </div>
@@ -105,12 +134,14 @@
       </div>
       <div id="infoVenda">
         <h3 id="infoName" class="btnH3">RESUMO VENDA</h3>
-        
-        <div class="noshow" id="infoUl">
-        <ul id="infoUlQuebraGelo"></ul>
-        <ul id="infoUlAbordagem"></ul>
-      </div>
 
+        <div class="noshow" id="infoUl">
+          <ul id="infoUlQuebraGelo"></ul>
+          <ul id="infoUlAbordagem"></ul>
+          <ul id="infoUlApresentacao"></ul>
+
+          
+        </div>
       </div>
     </section>
 
