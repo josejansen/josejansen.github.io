@@ -1,7 +1,8 @@
 //MELHORAR NA QUESTAO DA NOTA
 
-import { show } from './animation.js';
+import { notaColor, show } from './animation.js';
 import { creatApresentacao, infoApresentacao } from './infoVenda.js';
+
 
 const btnShowApresentacaoLoja = document.getElementById('btnShowApresentacaoLoja');
 const formApresentacaoLoja = document.getElementById('formApresentacaoLoja');
@@ -9,6 +10,7 @@ const askApresenta = document.getElementById('askApresenta');
 const labelText = document.getElementById('labelText');
 const btnApresentacaoLoja = document.getElementById('btnApresentacaoLoja');
 const inputTextArea = document.getElementById('inputTextArea');
+const notaApresentacao = document.getElementById('notaApresentacao');
 
 
 let apresentou;
@@ -25,7 +27,7 @@ export function apresentacaoLoja() {
 function inputChecked(e) {
   if (e.target.id === 'askApresentaSim') {
     apresentou = e.target.value;
-    notaApresentou = 100;
+    notaApresentou = 50;
     labelText.classList.contains('noshow') ? show(labelText) : null;
   } else if (e.target.id === 'askApresentaNao') {
     apresentou = e.target.value;
@@ -37,12 +39,16 @@ function inputChecked(e) {
 function btnEnviar(e) {
   e.preventDefault();
   let textAreaValue = inputTextArea.value;
+  textAreaValue === '' ? (notaTextArea = 0) : (notaTextArea = 50);
+  notaTotal = notaTextArea + notaApresentou;
   infoApresentacao.apresentou = apresentou;
-  infoApresentacao.textArea = textAreaValue;
-  infoApresentacao.nota = notaApresentou;
-  creatApresentacao(infoApresentacao);
+  infoApresentacao.textArea =textAreaValue;
+  infoApresentacao.nota = notaTotal;
+  notaApresentacao.textContent = notaTotal;
+  notaApresentacao.value = notaTotal;
+  notaColor(notaApresentacao);
+  show(notaApresentacao);
   show(formApresentacaoLoja);
-  //textAreaValue === '' ? (notaTextArea = 0) : (notaTextArea = 50);
- // notaTotal = notaTextArea + notaApresentou;
+  creatApresentacao(infoApresentacao);
  
 }

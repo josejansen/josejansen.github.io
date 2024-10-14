@@ -63,26 +63,11 @@
           </label>
           <label for="askCliente" class="noshow" id="askCliente">
             Quebrou o gelo de qual forma?
-            <input
-              type="radio"
-              name="askCliente"
-              id="focoProduto"
-              value="sim"
-            />
+            <input type="radio" name="askCliente" id="focoProduto" value="sim" />
             Foco no produto
-            <input
-              type="radio"
-              name="askCliente"
-              id="focoCliente"
-              value="sim"
-            />
+            <input type="radio" name="askCliente" id="focoCliente" value="sim" />
             Foco no cliente
-            <input
-              type="radio"
-              name="askCliente"
-              id="naoConseguiu"
-              value="não"
-            />
+            <input type="radio" name="askCliente" id="naoConseguiu" value="não" />
             Não conseguiu
           </label>
           <button id="btnQuebraGelo">Enviar</button>
@@ -92,33 +77,22 @@
 
       <!--APRESENTA DA LOJA-->
       <div id="apresentacaoLoja">
-        <h3 id="btnShowApresentacaoLoja" class="btnH3">
-          3 - Apresentação da Loja
-        </h3>
+        <h3 id="btnShowApresentacaoLoja" class="btnH3">3 - Apresentação da Loja</h3>
+        <h4 id="notaApresentacao" class="nota noshow"></h4>
         <form id="formApresentacaoLoja" class="noshow">
           <label for="askApresenta" id="askApresenta" class="show"
             >Apresentou a loja?
-            <input
-              type="radio"
-              name="askApresenta"
-              id="askApresentaSim"
-              value="Sim"
-            />Sim
-            <input
-              type="radio"
-              name="askApresenta"
-              id="askApresentaNao"
-              value="Não"
-            />Não
+            <input type="radio" name="askApresenta" id="askApresentaSim" value="Sim" />Sim
+            <input type="radio" name="askApresenta" id="askApresentaNao" value="Não" />Não
           </label>
           <label id="labelText" class="noshow">
             Como apresentou a loja para seu cliente:
             <textarea
-            id="inputTextArea"
+              id="inputTextArea"
               class="inputText"
               placeholder="Apresentei os produtos"
               rows="4"
-              cols="40"
+              cols="25"
             >
             </textarea>
           </label>
@@ -126,9 +100,35 @@
         </form>
       </div>
       <!--APRESENTA DA LOJA-->
+
+      <!--OBJECOES-->
       <div id="contornoObj">
         <h3 id="btnContornoObj" class="btnH3">4 - Contorno de Objeção</h3>
+        <h4 id="notaContornoObj" class="nota noshow"></h4>
+        <form id="formObj" class="noshow">
+          <label for="clienteObjecoes">
+            Cliente teve objeções?
+            <input type="radio" name="clienteObjecoes" id="objecaoSim"> Sim
+            <input type="radio" name="clienteObjecoes" id="objecaoNao"> Não
+          </label>
+          <label for="motivoObjecoes" id="motivoObjecoes" class="noshow">
+            Qual foi o motivo das objeções? <br>
+            <input type="checkbox" name="motivoObjecoes" id="motivoObjecoesPreco" value="Preço"> Preço <br>
+            <input type="checkbox" name="motivoObjecoes" id="motivoObjecoesQualidade" value="Qualidade"> Qualidade <br>
+            <input type="checkbox" name="motivoObjecoes" id="motivoObjecoesCaimento" value="Caimento das peças no corpo"> Caimento das peças no corpo <br>
+            <input type="checkbox" name="motivoObjecoes" id="motivoObjecoesNaoGostou" value="Não gostou das peças"> Não gostou das peças <br>
+          </label>
+          <label for="conseguiuContornar" class="noshow" id="conseguiuContornar">
+            Conseguiu contornar a objeção? <br>
+            <input type="radio" name="conseguiuContornar" id="conseguiuContornarSim"> Sim <br>
+            <input type="radio" name="conseguiuContornar" id="conseguiuContornarNao"> Não <br>
+
+          </label>
+          <button id="btnObjecoes" class="show">Enviar</button>
+        </form>
       </div>
+      <!--OBJECOES-->
+
       <div id="fechamento">
         <h3 id="btnFechamento" class="btnH3">5 - Fechamento</h3>
       </div>
@@ -139,8 +139,7 @@
           <ul id="infoUlQuebraGelo"></ul>
           <ul id="infoUlAbordagem"></ul>
           <ul id="infoUlApresentacao"></ul>
-
-          
+          <ul id="infoUlObj"></ul>
         </div>
       </div>
     </section>
