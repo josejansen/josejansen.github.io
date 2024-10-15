@@ -12,7 +12,7 @@ const notaContornoObj = document.getElementById('notaContornoObj');
 
 let objecoes;
 let contorno;
-let notaObjecao;
+export let notaTotalObjecao;
 let motivacoes = [];
 
 export function objecao() {
@@ -33,7 +33,7 @@ function clienteObj(e) {
     conseguiuContornar.addEventListener('click', contornoObj);
   } else if (e.target === objecaoNao) {
     objecoes = 'Não';
-    notaObjecao = 0;
+    notaTotalObjecao = 0;
     motivoObjecoes.classList.contains('show') ? show(motivoObjecoes) : null;
     conseguiuContornar.classList.contains('show') ? show(conseguiuContornar) : null;
   }
@@ -48,18 +48,11 @@ function motivacoesValue() {
 }
 
 function contornoObj(e) {
-  /* e.target === conseguiuContornarSim ? (notaObjecao = 100) : null;
-  e.target === conseguiuContornarSim
-    ? motivacoes.length > 0
-      ? (notaObjecao = 50)
-      : null
-    : (notaObjecao = 0);
-  notaObjecao = 100 ? (contorno = 'Sim') : (contorno = 'Não');*/
   if (e.target === conseguiuContornarSim) {
-    notaObjecao = 100;
+    notaTotalObjecao = 100;
     contorno = 'Sim';
   } else if (e.target === conseguiuContornarNao) {
-    motivacoes.length > 0 ? (notaObjecao = 50) : (notaObjecao = 0);
+    motivacoes.length > 0 ? (notaTotalObjecao = 50) : (notaTotalObjecao = 0);
     contorno = 'Não';
   }
 }
@@ -69,10 +62,10 @@ function enviaInfo(e) {
   infoObj.obj = objecoes;
   infoObj.qualObj = motivacoes;
   infoObj.conseguiuContornar = contorno;
-  infoObj.nota = notaObjecao;
+  infoObj.nota = notaTotalObjecao;
   creatObj(infoObj);
-  notaContornoObj.value = notaObjecao;
-  notaContornoObj.textContent = notaObjecao;
+  notaContornoObj.value = notaTotalObjecao;
+  notaContornoObj.textContent = notaTotalObjecao;
   notaColor(notaContornoObj);
   show(notaContornoObj);
   show(formObj);

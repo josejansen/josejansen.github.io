@@ -16,7 +16,7 @@ const notaApresentacao = document.getElementById('notaApresentacao');
 let apresentou;
 let notaApresentou;
 let notaTextArea;
-let notaTotal;
+export let notaTotalApresentacao;
 
 export function apresentacaoLoja() {
   btnShowApresentacaoLoja.addEventListener('click', () => show(formApresentacaoLoja));
@@ -40,12 +40,12 @@ function btnEnviar(e) {
   e.preventDefault();
   let textAreaValue = inputTextArea.value;
   textAreaValue === '' ? (notaTextArea = 0) : (notaTextArea = 50);
-  notaTotal = notaTextArea + notaApresentou;
+  notaTotalApresentacao = notaTextArea + notaApresentou;
   infoApresentacao.apresentou = apresentou;
   infoApresentacao.textArea =textAreaValue;
-  infoApresentacao.nota = notaTotal;
-  notaApresentacao.textContent = notaTotal;
-  notaApresentacao.value = notaTotal;
+  infoApresentacao.nota = notaTotalApresentacao;
+  notaApresentacao.textContent = notaTotalApresentacao;
+  notaApresentacao.value = notaTotalApresentacao;
   notaColor(notaApresentacao);
   show(notaApresentacao);
   show(formApresentacaoLoja);

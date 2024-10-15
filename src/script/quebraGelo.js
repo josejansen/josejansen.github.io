@@ -9,10 +9,10 @@ const btnQuebraGelo = document.getElementById('btnQuebraGelo');
 const notaValue = document.getElementById('notaQuebraGelo');
 const inputName = document.getElementById('inputName');
 
+let notaQuebraGelo;
 let nameCliente;
 let notaNome;
-let notaQuebraGelo;
-let notaTotal;
+export let notaTotalQuebraGelo;
 let radioSelect;
 let focoQuebra;
 export function quebraGelo() {
@@ -28,14 +28,14 @@ function evento(e) {
     e.preventDefault();
     const radioSelect = inputRadioQuebraG();
     notaRadio(radioSelect);
-    notaTotal = notaNome + notaQuebraGelo;
-    if (!notaTotal) notaTotal = 0;
-    notaValue.textContent = notaTotal;
-    notaValue.value = notaTotal;
+    notaTotalQuebraGelo = notaNome + notaQuebraGelo;
+    if (!notaTotalQuebraGelo) notaTotalQuebraGelo = 0;
+    notaValue.textContent = notaTotalQuebraGelo;
+    notaValue.value = notaTotalQuebraGelo;
     notaColor(notaValue);
     nameCliente = inputName.value;
     infoQuebraGelo.Name = nameCliente;
-    infoQuebraGelo.notaQuebra = notaTotal;
+    infoQuebraGelo.notaQuebra = notaTotalQuebraGelo;
     infoQuebraGelo.quebraQualForma = focoQuebra;
     creatQuebraGelo(infoQuebraGelo);
     show(formQuebraGelo);

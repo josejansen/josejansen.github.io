@@ -1,4 +1,9 @@
-import { show } from './animation.js';
+import { notaTotalAbordagem } from './abordagem.js';
+import { notaColor, show } from './animation.js';
+import { notaTotalApresentacao } from './apresentacaoLoja.js';
+import { notaTotalFechamento } from './fechamento.js';
+import { notaTotalObjecao } from './objecao.js';
+import { notaTotalQuebraGelo } from './quebraGelo.js';
 
 const infoUlAbordagem = document.getElementById('infoUlAbordagem');
 const infoUlQuebraGelo = document.getElementById('infoUlQuebraGelo');
@@ -6,13 +11,15 @@ const infoName = document.getElementById('infoName');
 const infoUl = document.getElementById('infoUl');
 const infoUlApresentacao = document.getElementById('infoUlApresentacao');
 const infoUlObj = document.getElementById('infoUlObj');
-let ProntoparaCliente;
-let recepcaoCliente;
-let notaAbordagem;
+const infoUlFechamento = document.getElementById('infoUlFechamento');
+const notaTotalAtendimento = document.getElementById('notaTotalAtendimento');
+
 export const infoAbordagem = { ProntoparaCliente: '', recepcaoCliente: '', notaAbordagem: '' };
 export const infoQuebraGelo = { Name: '', quebraQualForma: '', notaQuebra: '' };
 export const infoApresentacao = { apresentou: '', textArea: '', nota: '' };
 export const infoObj = { obj: '', qualObj: '', conseguiuContornar: '', nota: '' };
+export const infoFechamento = { fechamento: '', textFechamento: '', sucesso: '', nota: '' };
+
 export function creatQuebraGelo(infoQuebraGelo) {
   let li = `<li> O nome do cliente é: ${infoQuebraGelo.Name}</li>
     <li> Quebrou a o gelo com: ${infoQuebraGelo.quebraQualForma}</li>
@@ -40,7 +47,35 @@ export function creatObj(infoObj) {
       <li>Quais foram as objeções?${infoObj.qualObj} </li>
       <li>Conseguiu contornar as objeções?${infoObj.conseguiuContornar} </li>
       <li> Nota do contorno das objeções: ${infoObj.nota}</li>`;
-      infoUlObj.innerHTML = li;
+  infoUlObj.innerHTML = li;
 }
 
+export function creatFechamento(infoFechamento) {
+  let li = `<li>Teve iniciativa de fazer o fechamento? ${infoFechamento.fechamento}</li>
+      <li>Qual foi o fechamento:${infoFechamento.textFechamento} </li>
+      <li>Fechamento deu certo?${infoFechamento.sucesso} </li>
+      <li> Nota do fechamento ${infoFechamento.nota}</li>`;
+  infoUlFechamento.innerHTML = li;
+}
+
+function calculoTotal(e) {
+  e.preventDefault();
+  const notatext = document.getElementById('notatotal');
+  notatext.textContent =
+    (notaTotalApresentacao +
+      notaTotalAbordagem +
+      notaTotalFechamento +
+      notaTotalObjecao +
+      notaTotalQuebraGelo) /
+    5;
+    notatext.value =  (notaTotalApresentacao +
+      notaTotalAbordagem +
+      notaTotalFechamento +
+      notaTotalObjecao +
+      notaTotalQuebraGelo) /
+    5;
+    notaColor(notatext);
+}
+
+notaTotalAtendimento.addEventListener('click', calculoTotal);
 infoName.addEventListener('click', () => show(infoUl));

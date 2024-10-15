@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -108,30 +108,79 @@
         <form id="formObj" class="noshow">
           <label for="clienteObjecoes">
             Cliente teve objeções?
-            <input type="radio" name="clienteObjecoes" id="objecaoSim"> Sim
-            <input type="radio" name="clienteObjecoes" id="objecaoNao"> Não
+            <input type="radio" name="clienteObjecoes" id="objecaoSim" /> Sim
+            <input type="radio" name="clienteObjecoes" id="objecaoNao" /> Não
           </label>
           <label for="motivoObjecoes" id="motivoObjecoes" class="noshow">
-            Qual foi o motivo das objeções? <br>
-            <input type="checkbox" name="motivoObjecoes" id="motivoObjecoesPreco" value="Preço"> Preço <br>
-            <input type="checkbox" name="motivoObjecoes" id="motivoObjecoesQualidade" value="Qualidade"> Qualidade <br>
-            <input type="checkbox" name="motivoObjecoes" id="motivoObjecoesCaimento" value="Caimento das peças no corpo"> Caimento das peças no corpo <br>
-            <input type="checkbox" name="motivoObjecoes" id="motivoObjecoesNaoGostou" value="Não gostou das peças"> Não gostou das peças <br>
+            Qual foi o motivo das objeções? <br />
+            <input type="checkbox" name="motivoObjecoes" id="motivoObjecoesPreco" value="Preço" />
+            Preço <br />
+            <input
+              type="checkbox"
+              name="motivoObjecoes"
+              id="motivoObjecoesQualidade"
+              value="Qualidade"
+            />
+            Qualidade <br />
+            <input
+              type="checkbox"
+              name="motivoObjecoes"
+              id="motivoObjecoesCaimento"
+              value="Caimento das peças no corpo"
+            />
+            Caimento das peças no corpo <br />
+            <input
+              type="checkbox"
+              name="motivoObjecoes"
+              id="motivoObjecoesNaoGostou"
+              value="Não gostou das peças"
+            />
+            Não gostou das peças <br />
           </label>
           <label for="conseguiuContornar" class="noshow" id="conseguiuContornar">
-            Conseguiu contornar a objeção? <br>
-            <input type="radio" name="conseguiuContornar" id="conseguiuContornarSim"> Sim <br>
-            <input type="radio" name="conseguiuContornar" id="conseguiuContornarNao"> Não <br>
-
+            Conseguiu contornar a objeção? <br />
+            <input type="radio" name="conseguiuContornar" id="conseguiuContornarSim" /> Sim <br />
+            <input type="radio" name="conseguiuContornar" id="conseguiuContornarNao" /> Não <br />
           </label>
           <button id="btnObjecoes" class="show">Enviar</button>
         </form>
       </div>
       <!--OBJECOES-->
 
+      <!--FECHAMENTO-->
       <div id="fechamento">
         <h3 id="btnFechamento" class="btnH3">5 - Fechamento</h3>
+        <h4 id="notaFechamento" class="nota noshow"></h4>
+        <form id="formFechamento" class="noshow">
+          <label for="teveFechamento">
+            Teve a iniciativa de fazer o fechamento? <br />
+            <input type="radio" name="teveFechamento" id="fechamentoSim" />
+            Sim <br />
+            <input type="radio" name="teveFechamento" id="fechamentoNao" />
+            Não <br />
+          </label>
+          <label id="textFechamento" id="textFechamento" class="noshow">
+            Qual foi o fechamento usado?
+            <textarea
+              id="inputTextFechamento"
+              class="inputText"
+              placeholder="Qual foi o fechamento"
+              rows="4"
+              cols="25"
+            >
+            </textarea>
+          </label>
+
+          <label for="fechamentoDeuCerto" id="fechamentoDeuCerto" class="noshow">
+            Fechamento deu certo? <br />
+            <input type="radio" id="fechamentoCerto" /> Sim <br />
+            <input type="radio" id="fechamentoErrado" /> Não <br />
+          </label>
+          <button id="btnEnviarFechamento">Enviar</button>
+        </form>
       </div>
+      <!--FECHAMENTO-->
+
       <div id="infoVenda">
         <h3 id="infoName" class="btnH3">RESUMO VENDA</h3>
 
@@ -140,6 +189,10 @@
           <ul id="infoUlAbordagem"></ul>
           <ul id="infoUlApresentacao"></ul>
           <ul id="infoUlObj"></ul>
+          <ul id="infoUlFechamento"></ul>
+
+          <button id="notaTotalAtendimento">Calcular nota do atendimento</button>
+          <p id="notatotal"></p>
         </div>
       </div>
     </section>

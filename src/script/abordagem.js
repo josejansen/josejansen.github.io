@@ -15,8 +15,7 @@ const notaValue = document.getElementById('notaAbordagem');
 
 let prontoparaCliente;
 let recepcaoCliente;
-let notaAbordagem;
-let nota;
+export let notaTotalAbordagem;
 
 export function abordagem() {
   divAbordagem.addEventListener('click', evento);
@@ -47,26 +46,26 @@ function valores(e) {
     if (recepcaoQuente.checked) {
       prontoparaCliente = 'Sim';
       recepcaoCliente = 'recepção quente';
-      nota = 100;
+      notaTotalAbordagem = 100;
     } else if (recepcaoFria.checked) {
       prontoparaCliente = 'Sim';
       recepcaoCliente = 'recepção fria';
-      nota = 75;
+      notaTotalAbordagem = 75;
     }
     if (!recepcaoFria.checked && !recepcaoQuente.checked)
       return errorMsg(divAbordagem);
   } else if (recepcaoNao.checked) {
-    nota = 0;
+    notaTotalAbordagem = 0;
     prontoparaCliente = 'Não';
   }
 
   show(formAbordagem);
-  notaValue.textContent = nota;
-  notaValue.value = nota;
+  notaValue.textContent = notaTotalAbordagem;
+  notaValue.value = notaTotalAbordagem;
   notaColor(notaValue);
 
   infoAbordagem.ProntoparaCliente = prontoparaCliente;
-  infoAbordagem.notaAbordagem = nota;
+  infoAbordagem.notaAbordagem = notaTotalAbordagem;
   infoAbordagem.recepcaoCliente = recepcaoCliente
   creatAbordagem(infoAbordagem);
 }
