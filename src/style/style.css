@@ -10,7 +10,7 @@
   padding: 10px;
   min-height: 600px;
   max-width: 600px;
-  background: #9580fc;
+  background: #8AB9DE;
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -58,4 +58,10 @@
 .inputText{
   height: 100px;
   resize: none;
+}
+.lista{
+  list-style: none;
+  color: aliceblue;
+  font-style: italic;
+
 }
