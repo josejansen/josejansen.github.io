@@ -1,4 +1,4 @@
-import { show, notaColor } from './animation.js';
+import { show, notaColor, errorMsg } from './animation.js';
 import { creatQuebraGelo, infoQuebraGelo } from './infoVenda.js';
 
 const btnShowQuebraGelo = document.getElementById('btnShowQuebraGelo');
@@ -9,9 +9,11 @@ const btnQuebraGelo = document.getElementById('btnQuebraGelo');
 const notaValue = document.getElementById('notaQuebraGelo');
 const inputName = document.getElementById('inputName');
 
+const divQuebraGelo = document.getElementById('quebraGelo');
 let notaQuebraGelo;
 let nameCliente;
 let notaNome;
+let nameChecked;
 export let notaTotalQuebraGelo;
 let radioSelect;
 let focoQuebra;
@@ -26,7 +28,19 @@ function evento(e) {
   eName(click);
   if (click === btnQuebraGelo) {
     e.preventDefault();
+    nameCliente = inputName.value;
+    if (!nameChecked) return errorMsg(divQuebraGelo);
+    if(nameChecked === 1) {
+      if (!nameCliente) {
+        errorMsg(divQuebraGelo);
+        return;
+      }
+    }
+    
     const radioSelect = inputRadioQuebraG();
+    if (!radioSelect) return errorMsg(divQuebraGelo);
+
+
     notaRadio(radioSelect);
     notaTotalQuebraGelo = notaNome + notaQuebraGelo;
     if (!notaTotalQuebraGelo) notaTotalQuebraGelo = 0;
@@ -52,15 +66,21 @@ function eName(name) {
       show(askCliente);
       show(askName);
     }
+    nameChecked = 1;
     notaNome = 50;
     return notaNome;
   }
   if (name === document.getElementById('nameNo')) {
     if (!askName.classList.contains('show')) {
+      nameChecked = true;
+      notaNome = 0;
       show(askCliente);
     }
     if (askName.classList.contains('show')) show(askName);
-    notaNome = 0;
+    if (name !== document.getElementById('nameNo') && name !== document.getElementById('nameYes')) {
+      nameChecked = false;
+    }
+
     return notaNome;
   }
 }
@@ -81,6 +101,7 @@ function inputRadioQuebraG() {
       break;
     }
   }
+  
   return radioSelect;
 }
 //funçao para retornar o radio SELECIONADO
@@ -91,3 +112,9 @@ function notaRadio(radio) {
   if (radio === 'nao') return (notaQuebraGelo = 0);
 }
 //funçao para retornar A NOTA DO RADIO SELECIONADO
+
+//FUNCAO PARA VALIDAR
+function validation() {
+  if (!nameChecked) return errorMsg(divQuebraGelo);
+  //if(nameChecked)
+}
