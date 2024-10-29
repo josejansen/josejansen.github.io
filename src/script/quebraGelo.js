@@ -20,40 +20,68 @@ let focoQuebra;
 export function quebraGelo() {
   btnShowQuebraGelo.addEventListener('click', () => show(formQuebraGelo));
   formQuebraGelo.addEventListener('click', evento);
+  btnQuebraGelo.addEventListener('click', envia)
 }
 
 function evento(e) {
-  notaQuebraGelo = 0;
+  
+ 
   let click = e.target;
-  eName(click);
-  if (click === btnQuebraGelo) {
-    e.preventDefault();
-    nameCliente = inputName.value;
-    if (!nameChecked) return errorMsg(divQuebraGelo);
-    if(nameChecked === 1) {
-      if (!nameCliente) {
-        errorMsg(divQuebraGelo);
-        return;
-      }
+  
+  if (document.getElementById('nameYes').checked) {
+    if (askName.classList.contains('noshow')) {
+      show(askName);
+      if (askCliente.classList.contains('noshow')) show(askCliente);
     }
+    nameCliente = inputName.value;
+   
+    notaNome = 50;
+    return notaNome;
+  
+}
+  if (document.getElementById('nameNo').checked) {
+    if (!askCliente.classList.contains('show')) {
     
+      notaNome = 0;
+      show(askCliente);
+    }
+    if (askName.classList.contains('show')) show(askName);
+    if (!document.getElementById('nameYes').checked && !document.getElementById('nameNo').checked) {
+   //   nameChecked = false;
+      notaNome = 0;
+    }
+    notaNome = 0;
+ // nameChecked = true;
+ nameCliente = 'NÃO INFORMADO'
+    return notaNome;
+  }
+ 
+}
+
+function envia(e){
+ 
+    e.preventDefault();
+    notaQuebraGelo = 0;
     const radioSelect = inputRadioQuebraG();
+    
+    if (!nameCliente) {
+      errorMsg(divQuebraGelo);
+      return;
+    }
+
     if (!radioSelect) return errorMsg(divQuebraGelo);
 
-
-    notaRadio(radioSelect);
     notaTotalQuebraGelo = notaNome + notaQuebraGelo;
     if (!notaTotalQuebraGelo) notaTotalQuebraGelo = 0;
     notaValue.textContent = notaTotalQuebraGelo;
     notaValue.value = notaTotalQuebraGelo;
     notaColor(notaValue);
-    nameCliente = inputName.value;
     infoQuebraGelo.Name = nameCliente;
     infoQuebraGelo.notaQuebra = notaTotalQuebraGelo;
     infoQuebraGelo.quebraQualForma = focoQuebra;
     creatQuebraGelo(infoQuebraGelo);
     show(formQuebraGelo);
-  }
+  
 }
 
 function eName(name) {
@@ -66,21 +94,24 @@ function eName(name) {
       show(askCliente);
       show(askName);
     }
-    nameChecked = 1;
+    nameCliente = inputName.value;
+    //nameChecked = 1;
     notaNome = 50;
     return notaNome;
   }
   if (name === document.getElementById('nameNo')) {
     if (!askName.classList.contains('show')) {
-      nameChecked = true;
+
       notaNome = 0;
       show(askCliente);
     }
     if (askName.classList.contains('show')) show(askName);
     if (name !== document.getElementById('nameNo') && name !== document.getElementById('nameYes')) {
-      nameChecked = false;
-    }
 
+      notaNome = 0;
+    }
+    notaNome = 0;
+ nameCliente = 'NÃO INFORMADO'
     return notaNome;
   }
 }
@@ -101,7 +132,7 @@ function inputRadioQuebraG() {
       break;
     }
   }
-  
+  notaRadio(radioSelect)
   return radioSelect;
 }
 //funçao para retornar o radio SELECIONADO
@@ -113,8 +144,3 @@ function notaRadio(radio) {
 }
 //funçao para retornar A NOTA DO RADIO SELECIONADO
 
-//FUNCAO PARA VALIDAR
-function validation() {
-  if (!nameChecked) return errorMsg(divQuebraGelo);
-  //if(nameChecked)
-}

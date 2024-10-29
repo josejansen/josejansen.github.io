@@ -26,6 +26,7 @@ export function creatQuebraGelo(infoQuebraGelo) {
     <li> A nota do quebra de gelo é:  ${infoQuebraGelo.notaQuebra}</li>
     `;
   infoUlQuebraGelo.innerHTML = li;
+  infoUl.classList.add('lishow');
 }
 
 export function creatAbordagem(infoAbordagem) {
@@ -33,6 +34,7 @@ export function creatAbordagem(infoAbordagem) {
     <li>Como foi a recepção do cliente ${infoAbordagem.recepcaoCliente} </li>
     <li> Nota da Abordagem: ${infoAbordagem.notaAbordagem}</li>`;
   infoUlAbordagem.innerHTML = li;
+  infoUl.classList.add('lishow');
 }
 
 export function creatApresentacao(infoApresentacao) {
@@ -40,6 +42,7 @@ export function creatApresentacao(infoApresentacao) {
     <li>Comentarios de como foi:${infoApresentacao.textArea} </li>
     <li> Nota da Apresentação: ${infoApresentacao.nota}</li>`;
   infoUlApresentacao.innerHTML = li;
+  infoUl.classList.add('lishow');
 }
 
 export function creatObj(infoObj) {
@@ -48,6 +51,7 @@ export function creatObj(infoObj) {
       <li>Conseguiu contornar as objeções?${infoObj.conseguiuContornar} </li>
       <li> Nota do contorno das objeções: ${infoObj.nota}</li>`;
   infoUlObj.innerHTML = li;
+  infoUl.classList.add('lishow');
 }
 
 export function creatFechamento(infoFechamento) {
@@ -56,6 +60,7 @@ export function creatFechamento(infoFechamento) {
       <li>Fechamento deu certo?${infoFechamento.sucesso} </li>
       <li> Nota do fechamento ${infoFechamento.nota}</li>`;
   infoUlFechamento.innerHTML = li;
+  infoUl.classList.add('lishow');
 }
 
 function calculoTotal(e) {
@@ -78,4 +83,7 @@ function calculoTotal(e) {
 }
 
 notaTotalAtendimento.addEventListener('click', calculoTotal);
-infoName.addEventListener('click', () => show(infoUl));
+infoName.addEventListener('click', () =>{ 
+  if(infoUl.classList.contains('lishow')) show(infoUl);
+  
+  });
