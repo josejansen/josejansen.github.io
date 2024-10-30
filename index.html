@@ -18,28 +18,24 @@
           <h4 id="notaAbordagem" class="nota noshow"></h4>
         </div>
         <form action="" id="formAbordagem" class="noshow">
-          <p>Estava pronto para receber o cliente?</p>
-          <label>
-            <input type="radio" id="recepcaoSim" />
+          <p class="showText">Estava pronto para receber o cliente?</p>
+          <label form="recepcao">
+            <input type="radio" id="recepcaoSim" name="recepcao" />
             Sim
-          </label>
-          <label>
-            <input type="radio" id="recepcaoNao" />
+            <input type="radio" id="recepcaoNao" name="recepcao" />
             Não
           </label>
           <!--DIV PARA APARECER SE FOR SIM-->
           <div id="showDiv" class="noshow quente-fria">
-            <label>
-              <input type="radio" name="recepcaoQuente" id="recepcaoQuente" />
+            <label for="recepcaoQuenteFria">
+              <input type="radio" name="recepcaoQuenteFria" id="recepcaoQuente"/>
               Recepção quente
-            </label>
-            <label>
-              <input type="radio" name="recepcaoFria" id="recepcaoFria" />
+              <input type="radio" name="recepcaoQuenteFria" id="recepcaoFria" />
               Recepção fria
             </label>
           </div>
           <!--DIV PARA APARECER SE FOR SIM-->
-          <button class="btnStyle" id="btnAbordagem" >Enviar</button>
+          <button class="btnStyle" id="btnAbordagem">Enviar</button>
         </form>
         <h4 id="notaAbordagem" class="nota noshow"></h4>
       </div>
@@ -185,9 +181,7 @@
         <h3 id="infoName" class="btnH3">RESUMO VENDA</h3>
 
         <div class="noshow" id="infoUl">
-          <ul id="infoUlQuebraGelo" class="lista">
-            
-          </ul>
+          <ul id="infoUlQuebraGelo" class="lista"></ul>
           <ul id="infoUlAbordagem" class="lista"></ul>
           <ul id="infoUlApresentacao" class="lista"></ul>
           <ul id="infoUlObj" class="lista"></ul>

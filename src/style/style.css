@@ -16,6 +16,7 @@
   justify-items: center;
   align-items: center;
   gap: 50px;
+  border-radius: 10px;
 
   .btnH3 {
     text-align: center;
@@ -35,11 +36,7 @@
   display: inline-block;
   align-content: center;
 }
-#btnShowAbordagem {
-}
 
-.quente-fria {
-}
 .nota {
   height: 40px;
   border-radius: 10px;

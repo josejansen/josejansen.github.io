@@ -3,6 +3,7 @@
 export function show(element) {
   if (element.classList.contains('noshow')) {
     element.classList.remove('noshow');
+    element.style.display = 'flex';
     element.classList.add('show');
   } else if (element.classList.contains('show')) {
     element.classList.remove('show');

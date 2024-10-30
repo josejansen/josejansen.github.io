@@ -57,6 +57,7 @@ function valores(e) {
   } else if (recepcaoNao.checked) {
     notaTotalAbordagem = 0;
     prontoparaCliente = 'Não';
+    recepcaoCliente = 'Não teve recepcao'
   }
 
   show(formAbordagem);
